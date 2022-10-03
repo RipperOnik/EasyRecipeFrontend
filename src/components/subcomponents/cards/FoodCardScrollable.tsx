@@ -1,5 +1,4 @@
 import * as React from "react";
-// import "../../../styles/card.css";
 import { Link } from "react-router-dom";
 import Rating from "../Rating";
 import {useAppDispatch} from "../../../globalState/hooks"

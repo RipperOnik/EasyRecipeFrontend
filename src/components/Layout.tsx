@@ -6,10 +6,11 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useAppDispatch } from "../globalState/hooks";
 import { navigateNavbar, navigateToFeed } from "../globalState/reducerActions";
-import { NavbarItemsNames } from "../resources/strings";
+import { NavbarItemsNames, TabItemsNames } from "../resources/strings";
 import { Dishes } from "../resources/strings";
-import { useGetCertainDishPostsQuery } from "../globalState/api";
+import { useGetCertainDishPostsQuery, useGetCertainBrowseItemQuery } from "../globalState/api";
 import { navigateTab } from "../globalState/reducerActions";
+import { Categories } from "../resources/categories";
 
 
 
@@ -80,41 +81,39 @@ const Layout = () => {
 
 
 
-    // else if (pathname === "/browse/appetizers") {
-    //   dispatch(navigateToFeed({useQuery: () => api.useGetAppetizersPostsQuery, header: TabItemsNames.APPETIZERS, tag: ""}))
-    //   dispatch(navigateTab(TabItemsNames.APPETIZERS))
-    // }
-    // else if (pathname === "/browse/desserts") {
-    //   dispatch(navigateToFeed({useQuery: () => api.useGetDessertsPostsQuery, header: TabItemsNames.DESSERTS, tag: ""}))
-    //   dispatch(navigateTab(TabItemsNames.DESSERTS))
-    // }
-    // else if (pathname === `/browse/${TabItemsNames.KIDFRIENDLY.toLowerCase()}`) {
-    //   dispatch(navigateToFeed({useQuery: () => api.useGetKidPostsQuery, header: TabItemsNames.KIDFRIENDLY, tag: ""}))
-    //   dispatch(navigateTab(TabItemsNames.KIDFRIENDLY))
-    // }
-    // else if (pathname === `/browse/${TabItemsNames.MAINDISH.toLowerCase()}`) {
-    //   dispatch(navigateToFeed({useQuery: () => api.useGetMainDishPostsQuery, header: TabItemsNames.MAINDISH, tag: ""}))
-    //   dispatch(navigateTab(TabItemsNames.MAINDISH))
-    // }
-    // else if (pathname === `/browse/${TabItemsNames.QUICKANDEASY.toLowerCase()}`) {
-    //   dispatch(navigateToFeed({useQuery: () => api.useGetEasyPostsQuery, header: TabItemsNames.QUICKANDEASY, tag: ""}))
-    //   dispatch(navigateTab(TabItemsNames.QUICKANDEASY))
-    // }
-    // else if (pathname === `/browse/${TabItemsNames.SALADS.toLowerCase()}`) {
-    //   dispatch(navigateToFeed({useQuery: () => api.useGetSaladsPostsQuery, header: TabItemsNames.SALADS, tag: ""}))
-    //   dispatch(navigateTab(TabItemsNames.SALADS))
-    // }
-    // else if (pathname === `/browse/${TabItemsNames.SIDEDISH.toLowerCase()}`) {
-    //   dispatch(navigateToFeed({useQuery: () => api.useGetSideDishPostsQuery, header: TabItemsNames.SIDEDISH, tag: ""}))
-    //   dispatch(navigateTab(TabItemsNames.SIDEDISH))
-    // }
-    // else if (pathname === `/browse/${TabItemsNames.VEGETARIAN.toLowerCase()}`) {
-    //   dispatch(navigateToFeed({useQuery: () => api.useGetVegetarianPostsQuery, header: TabItemsNames.VEGETARIAN, tag: ""}))
-    //   dispatch(navigateTab(TabItemsNames.VEGETARIAN))
-    // }
 
-
-    
+    else if (pathname === `/browse/${TabItemsNames.APPETIZERS.toLowerCase()}`) {
+      dispatch(navigateToFeed({useQuery: () => useGetCertainBrowseItemQuery, header: TabItemsNames.APPETIZERS, tag: Categories.APPETIZERS}))
+      dispatch(navigateTab(TabItemsNames.APPETIZERS))
+    }
+    else if (pathname === `/browse/${TabItemsNames.DESSERTS.toLowerCase()}`) {
+      dispatch(navigateToFeed({useQuery: () => useGetCertainBrowseItemQuery, header: TabItemsNames.DESSERTS, tag: Categories.DESSERTS}))
+      dispatch(navigateTab(TabItemsNames.DESSERTS))
+    }
+    else if (pathname === `/browse/${TabItemsNames.KIDFRIENDLY.toLowerCase()}`) {
+      dispatch(navigateToFeed({useQuery: () => useGetCertainBrowseItemQuery, header: TabItemsNames.KIDFRIENDLY, tag: Categories.KID_FRIENDLY}))
+      dispatch(navigateTab(TabItemsNames.KIDFRIENDLY))
+    }
+    else if (pathname === `/browse/${TabItemsNames.MAINDISH.toLowerCase()}`) {
+      dispatch(navigateToFeed({useQuery: () => useGetCertainBrowseItemQuery, header: TabItemsNames.MAINDISH, tag: Categories.MAIN_DISH}))
+      dispatch(navigateTab(TabItemsNames.MAINDISH))
+    }
+    else if (pathname === `/browse/${TabItemsNames.QUICKANDEASY.toLowerCase()}`) {
+      dispatch(navigateToFeed({useQuery: () => useGetCertainBrowseItemQuery, header: TabItemsNames.QUICKANDEASY, tag: Categories.EASY}))
+      dispatch(navigateTab(TabItemsNames.QUICKANDEASY))
+    }
+    else if (pathname === `/browse/${TabItemsNames.SALADS.toLowerCase()}`) {
+      dispatch(navigateToFeed({useQuery: () => useGetCertainBrowseItemQuery, header: TabItemsNames.SALADS, tag: Categories.SALADS}))
+      dispatch(navigateTab(TabItemsNames.SALADS))
+    }
+    else if (pathname === `/browse/${TabItemsNames.SIDEDISH.toLowerCase()}`) {
+      dispatch(navigateToFeed({useQuery: () => useGetCertainBrowseItemQuery, header: TabItemsNames.SIDEDISH, tag: Categories.SIDE_DISH}))
+      dispatch(navigateTab(TabItemsNames.SIDEDISH))
+    }
+    else if (pathname === `/browse/${TabItemsNames.VEGETARIAN.toLowerCase()}`) {
+      dispatch(navigateToFeed({useQuery: () => useGetCertainBrowseItemQuery, header: TabItemsNames.VEGETARIAN, tag: Categories.VEGETARIAN}))
+      dispatch(navigateTab(TabItemsNames.VEGETARIAN))
+    }
 
   })
 

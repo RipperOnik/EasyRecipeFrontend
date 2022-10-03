@@ -2,15 +2,11 @@ import * as React from "react";
 import FoodCard from "./FoodCard";
 import DetailedPage from "../../interfaces/DetailedPage";
 
-import {useAppDispatch, useAppSelector} from "../../../globalState/hooks"
+import {useAppSelector} from "../../../globalState/hooks"
 
 import LoadingSpinner from "../specialCases/LoadingSpinner"
 
 
-// interface CardGroupProps {
-//   headerText: string;
-//   cards: DetailedPage[];
-// }
 
 function CardGroup() {
 
@@ -19,6 +15,16 @@ function CardGroup() {
   const useQuery = useAppSelector(state => state.currentFeed.useQuery)()
   const header = useAppSelector(state => state.currentFeed.header)
   const tag = useAppSelector(state => state.currentFeed.tag)
+
+  const words = header.split("_")
+
+  let headerFixed = ""
+
+  for (let index = 0; index < words.length; index++) {
+      const element = words[index];
+      headerFixed += element + " "
+  }
+  headerFixed = headerFixed.slice(0, headerFixed.length-1)
 
   let feedPosts;
 
@@ -63,7 +69,7 @@ function CardGroup() {
     return (
       <div className="container">
         <div className="row d-flex justify-content-center" style={{textAlign: "center"}}>
-          <h1>{header}</h1>
+          <h1>{headerFixed}</h1>
           {feedCards.map((card) => {
             return (
               <FoodCard

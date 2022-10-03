@@ -1,5 +1,4 @@
 import * as React from "react";
-// import "../../../styles/card.css";
 import Rating from "../Rating";
 import DetailedPage from "../../interfaces/DetailedPage";
 import { navigateToDetailedPage } from "../../../globalState/reducerActions";

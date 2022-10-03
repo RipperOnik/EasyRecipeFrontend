@@ -23,37 +23,16 @@ export const apiSlice = createApi({
     getCuisinePosts: builder.query({
       query: (cuisineTag) => `${cuisineTag}`,
     }),
-    getEasyPosts: builder.query({
-      query: () => Categories.EASY
-    }),
-    getKidPosts: builder.query({
-      query: () => Categories.KID_FRIENDLY
-    }),
-    getMainDishPosts: builder.query({
-      query: () => Categories.MAIN_DISH
-    }),
-    getDessertsPosts: builder.query({
-      query: () => Categories.DESSERTS
-    }),
-    getAppetizersPosts: builder.query({
-      query: () => Categories.APPETIZERS
-    }),
-    getSaladsPosts: builder.query({
-      query: () => Categories.SALADS
-    }),
-    getVegetarianPosts: builder.query({
-      query: () => Categories.VEGETARIAN
-    }),
-    getSideDishPosts: builder.query({
-      query: () => Categories.SIDE_DISH
-    }),
     getCertainDishPosts: builder.query({
       query: (dish) => `${dish}`
     }),
     searchPosts: builder.query({
       query: (searchQuery) => `search/${searchQuery}`
-
+    }),
+    getCertainBrowseItem: builder.query({
+      query: (browseItem) => `${browseItem}`
     })
+
 
 
   }),
@@ -64,15 +43,8 @@ export const {
   useGetPopularPostsQuery,
   useGetTrendingPostsQuery,
   useGetCuisinePostsQuery,
-  useGetEasyPostsQuery,
-  useGetKidPostsQuery,
-  useGetAppetizersPostsQuery,
-  useGetMainDishPostsQuery,
-  useGetDessertsPostsQuery,
-  useGetSaladsPostsQuery,
-  useGetVegetarianPostsQuery,
-  useGetSideDishPostsQuery,
   useGetCertainDishPostsQuery,
-  useSearchPostsQuery
+  useSearchPostsQuery,
+  useGetCertainBrowseItemQuery
 } = apiSlice;
 export default apiSlice;

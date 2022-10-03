@@ -1,5 +1,5 @@
 import * as React from "react";
-// import "../styles/styles.css";
+
 import CardGroup from "./subcomponents/cards/CardGroup";
 import Home from "./pages/Home";
 import Layout from "./Layout";
@@ -9,14 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Tabs from "./subcomponents/tabs/Tabs";
 
 import DetailedPage from "./pages/DetailedPage";
-import KidFriendly from "./pages/KidFriendly";
-import QuickAndEasy from "./pages/QuickAndEasy";
-import MainDish from "./pages/MainDish";
-import Desserts from "./pages/Desserts";
-import Appetizers from "./pages/Appetizers";
-import Salads from "./pages/Salads";
-import Vegetarian from "./pages/Vegetarian";
-import SideDish from "./pages/SideDish";
+
 import { TabItemsNames } from "../resources/strings";
 import {Dishes} from "../resources/strings"
 
@@ -44,11 +37,7 @@ function App() {
   tabsDishes.push(Dishes.sandwich.name)
 
 
-  // fetch('/api/posts/popular')
-  // .then((response) => response.json())
-  // .then((data) => console.log(data));
-
-
+  
 
   const router = createBrowserRouter([
     {
@@ -60,69 +49,10 @@ function App() {
           path: "/",
           element: <Home />,
         },
+
         {
-          path: `/browse/${TabItemsNames.QUICKANDEASY.toLowerCase()}`,
-          element: (
-            <div>
-            <Tabs tabs={tabsBrowse} path={"/browse/"} /> <QuickAndEasy />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.KIDFRIENDLY.toLowerCase()}`,
-          element: (
-            <div>
-            <Tabs tabs={tabsBrowse} path={"/browse/"} /> <KidFriendly />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.MAINDISH.toLowerCase()}`,
-          element: (
-            <div>
-             <Tabs tabs={tabsBrowse} path={"/browse/"} /> <MainDish />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.SIDEDISH.toLowerCase()}`,
-          element: (
-            <div>
-             <Tabs tabs={tabsBrowse} path={"/browse/"} /><SideDish />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.DESSERTS.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Desserts />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.APPETIZERS.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Appetizers />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.SALADS.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Salads />
-            </div>
-          ),
-        },
-        {
-          path: `/browse/${TabItemsNames.VEGETARIAN.toLowerCase()}`,
-          element: (
-            <div>
-              <Tabs tabs={tabsBrowse} path={"/browse/"} /> <Vegetarian />
-            </div>
-          ),
+          path: "/browse/:browseItem",
+          element: <div> <Tabs tabs={tabsBrowse} path={"/browse/"}/> <CardGroup/> </div>
         },
 
         {
@@ -141,10 +71,7 @@ function App() {
           path: "/search/:query",
           element: <CardGroup />
         }
-        // {
-        //   path: "/browse/:name",
-        //   element: <div> <Tabs tabs={tabsBrowse} path={"/browse/"}/>  <CardGroup /> </div>
-        // }
+
       ],
     },
   ]);

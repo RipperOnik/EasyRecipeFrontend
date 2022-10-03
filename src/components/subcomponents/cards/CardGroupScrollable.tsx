@@ -1,9 +1,8 @@
 import * as React from "react";
 import FoodCardScrollable from "./FoodCardScrollable";
 import { Link } from "react-router-dom";
-import { FoodCard } from "../../interfaces/FoodCard";
 import DetailedPage from "../../interfaces/DetailedPage"
-import { useAppDispatch, useAppSelector } from "../../../globalState/hooks";
+import { useAppDispatch} from "../../../globalState/hooks";
 import {navigateToFeed} from "../../../globalState/reducerActions"
 
 interface CardGroupScrollableProps {

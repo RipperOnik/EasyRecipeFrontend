@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useAppDispatch, useAppSelector } from "../../../globalState/hooks";
 import { currentNavbarID } from "../../../globalState/reducerActions";
-import {navigateNavbar} from "../../../globalState/reducerActions"
 import { Link } from "react-router-dom"
 
 

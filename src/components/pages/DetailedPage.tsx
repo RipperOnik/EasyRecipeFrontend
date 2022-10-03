@@ -1,14 +1,10 @@
 import * as React from "react";
-// import "../../styles/detailedPage.css";
-import { Link } from "react-router-dom";
-// import "../../styles/card.css";
 import Rating from "../subcomponents/Rating";
 import { useAppSelector } from "../../globalState/hooks";
 
 function DetailedPage() {
   const currentPage = useAppSelector((state) => state.currentDetailedPage);
 
-  // window.scrollTo(0, 0)
 
   return (
     <div>
