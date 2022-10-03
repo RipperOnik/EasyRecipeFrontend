@@ -124,4 +124,42 @@ export const Cuisines: Cuisine[] = [
       "https://lh3.googleusercontent.com/HXdKWAnBLGTYdonNQ9-Q3-M-qLdV04m1KEiNw4RfgxCdP4ZNPKqmVUoBzqGhutP3jhULthneT7D9Yhy3Zy_18yc",
     tag: Categories.GREEK,
   },
+
+
+  {
+    displayName: "Thai",
+    iconImage:
+      "https://lh3.googleusercontent.com/ZV-Sj8KUACLOMIIMVvq-aobeU6wxG1jU8DjzRmoQAyPKFdn7Tx9dTIE5xCIQr6EV0B8U9TwOO37rvqMQOUNelQ",
+    tag: Categories.THAI,
+  },
+  {
+    displayName: "Hawaiian",
+    iconImage:
+      "https://lh3.googleusercontent.com/PZeNOaYfWpriw8NFie0wGAFFi_klHnXQT-Wgd63_RqIwUFtNreL0C3krXbSzCOYLc_Nz0KTpd9Y0h0HXWu6Jzg",
+    tag: Categories.HAWAIIAN,
+  },
+  {
+    displayName: "Hungarian",
+    iconImage:
+      "https://lh3.googleusercontent.com/Ru25stI2-cClmioDnoRWy1kdNZfEH_HKhDDM-M4XstlVCSbhIzvgbw7xR_Wd1ZIb4S9X0sZbmzz5H3_LUF2PbA",
+    tag: Categories.HUNGARIAN,
+  },
+  {
+    displayName: "Moroccan",
+    iconImage:
+      "https://lh3.googleusercontent.com/RSA_ifDZt0iZhWa7UOve2eancs2BZAEAVwEAdcuM9PYGy5hos7U9OtcEVfqG-aKj0d2B923kuYyKAPbzXRadhw",
+    tag: Categories.MOROCCAN,
+  },
+  {
+    displayName: "Cuban",
+    iconImage:
+      "https://lh3.googleusercontent.com/PP-FAjmZZ9hmknNiIaL7VLgBBB1yK3lR5_JejiHBBxJwAxAlcZ8Kv1ddQK7n5LwNo-oOLN0ATAXYmuC5_FW1",
+    tag: Categories.CUBAN,
+  },
+  {
+    displayName: "Indian",
+    iconImage:
+      "https://lh3.googleusercontent.com/0CcUpTEjo0DDYGz90gklGED9DgU6OEi_Cgpcb4IAwCZeVlyH0eKFC-AxHn_CDpQBAwBRclR099v-u_6bhUJpXUM",
+    tag: Categories.INDIAN,
+  },
 ];

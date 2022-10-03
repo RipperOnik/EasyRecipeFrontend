@@ -11,7 +11,6 @@ export const Categories = {
     VEGETARIAN: "vegetarian",
 
     AMERICAN: "american",
-    // ASIAN: "asian",
     CHINESE: "chinese",
     ENGLISH: "english",
     FRENCH: "french",
@@ -21,6 +20,17 @@ export const Categories = {
     ITALIAN: "italian",
     JAPANESE: "japanese",
     SWEDISH: "swedish",
+    
+    THAI: "thai",
+    HAWAIIAN: "hawaiian",
+    HUNGARIAN: "hungarian",
+    MOROCCAN: "moroccan",
+    CUBAN: "cuban",
+    INDIAN: "indian",
+
+
+
+
 
     BROWNIE: "brownie",
     BURGER: "burger",
@@ -31,4 +41,5 @@ export const Categories = {
     PIE: "pie",
     PIZZA: "pizza",
     SANDWICH: "sandwich",
+
 }
