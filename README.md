@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# EasyRecipe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Концепция приложения
+Основная функция веб-приложения EasyRecipe заключается в поиске желаемых рецептов. Это реализовано при помощи удобной навигации по сайту, подборке рецептов
+по кухням разных стран, по категориям еды. Каждый сможет найти рецепты по вкусу, начиная с искусных поваров, ищущих самые сложные и изысканные блюда, заканчивая людьми, 
+ищущими быстрые рецепты, занимающие 15 минут вашего времени. 
+Удобная система поиска позволяет искать рецепты по названию для экономии времени. 
+Ссылка на сайт - https://easy-recipe-app.herokuapp.com/ 
 
-## Available Scripts
+## Основные функциональные возможности
+- Фильтрация по категориям рецептов 
+- Показ домашней страницы с самыми актуальными и трендовыми рецептами 
+- Показ странички с детальной информацией рецепта, включающую шаги приготовления, время приготовления, калории и ингридиенты
+- Возможность поиска рецептов по названию
 
-In the project directory, you can run:
+## Используемые технологии 
+### Frontend
+- React
+- Redux
+- Typescript
+- CSS
+- HTML
+- Bootstrap
+### Backend
+- Java
+- Spring (Core, MVC, JdbcTemplate, Jdbc, Boot)
 
-### `npm start`
+## Скриншоты
+<img width="1510" alt="image" src="https://user-images.githubusercontent.com/55228345/193920714-18eed99a-922a-464e-9a58-f3c134b5e0ae.png">
+<img width="1510" alt="image" src="https://user-images.githubusercontent.com/55228345/193920874-a3793d43-8bda-4361-8e18-b830ea4d543d.png">
+<img width="1512" alt="image" src="https://user-images.githubusercontent.com/55228345/193920936-3225212f-3655-42d3-b1c2-481de43a28ad.png">
+<img width="1512" alt="image" src="https://user-images.githubusercontent.com/55228345/193920996-f53097a8-f08d-4cb8-b238-d3e4a759c543.png">
+<img width="1512" alt="image" src="https://user-images.githubusercontent.com/55228345/193921074-da0cf0d4-cb55-4cc9-8c14-e384bd34be9c.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
