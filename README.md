@@ -19,7 +19,7 @@ The main function of the EasyRecipe web application is to search for desired rec
 - HTML
 - Bootstrap
   
-### Backend
+### Backend (visit the backend repository here https://github.com/RipperOnik/EasyRecipeBackend)
 - Java
 - Spring (Core, MVC, JdbcTemplate, Jdbc, Boot)
 - PostgresSQL
